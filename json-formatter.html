@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free JSON Formatter & Validator Online — No Sign-Up</title>
+<meta name="description" content="Format, validate, and minify JSON online for free. Paste your JSON to instantly pretty-print it, catch syntax errors, or minify it for production — runs entirely in your browser, nothing is uploaded.">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2150962689885624"
+     crossorigin="anonymous"></script>
+<script src="theme.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="dev-toolbox.css">
+</head>
+<body>
+
+<aside class="ad-rail ad-rail-left"><!-- AD BANNER SLOT: left skyscraper (160x600) -- replace with AdSense ins tag --></aside>
+<aside class="ad-rail ad-rail-right"><!-- AD BANNER SLOT: right skyscraper (160x600) -- replace with AdSense ins tag --></aside>
+
+<div class="ad-slot"><!-- AD BANNER SLOT: top leaderboard (728x90) -- replace with AdSense ins tag --></div>
+
+<header>
+  <div>
+    <h1>Free JSON Formatter & Validator</h1>
+    <p>Paste JSON, get pretty-printed or minified output instantly, and catch syntax errors as you go.</p>
+  </div>
+  <div class="header-actions">
+    <a class="home-btn" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>Home</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+  </div>
+</header>
+
+<div class="wrap">
+  <p class="intro-text">
+    This free online JSON formatter cleans up messy, minified, or hand-edited JSON so it's actually
+    readable — paste any JSON object or array below and click <strong>Format</strong> to pretty-print it
+    with proper indentation, or <strong>Minify</strong> to strip whitespace for production use. If the
+    JSON is invalid, it tells you exactly what's wrong instead of just failing silently.
+  </p>
+
+  <div class="panel active" data-panel="json">
+    <h2>JSON Formatter & Validator</h2>
+    <textarea id="jsonIn" placeholder='{"paste":"your JSON here"}'></textarea>
+    <div class="btn-row">
+      <button class="btn" onclick="jsonFormat(2)">Format</button>
+      <button class="btn secondary" onclick="jsonFormat(0)">Minify</button>
+      <button class="btn secondary" onclick="copyText('jsonOut')">Copy Output</button>
+    </div>
+    <div id="jsonErr" class="error"></div>
+    <textarea id="jsonOut" class="out" readonly placeholder="Formatted output appears here"></textarea>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="about-block">
+    <h2>What this JSON formatter does</h2>
+    <p>
+      JSON (JavaScript Object Notation) is the standard format for data exchanged between APIs, config
+      files, and countless developer tools — but it's frequently delivered minified into one dense,
+      unreadable line, or hand-typed with a missing comma or unclosed bracket. This tool solves both
+      problems: <strong>Format</strong> re-indents your JSON with 2-space nesting so you can actually read
+      the structure, while <strong>Minify</strong> does the reverse — stripping all unnecessary whitespace
+      down to the smallest valid representation, which is what you want before shipping JSON to
+      production.
+    </p>
+    <p>
+      Along the way, it validates the JSON against the spec. If something's wrong — a trailing comma, a
+      missing quote, mismatched brackets — you'll get a specific error message pointing at the problem
+      instead of a blank screen, which makes it useful for quickly debugging malformed API responses or
+      config files.
+    </p>
+    <p>
+      Everything runs as JavaScript inside your own browser tab; nothing you paste here is ever sent to a
+      server, so it's safe to use with real API responses, internal config, or anything else you wouldn't
+      want to paste into a random website.
+    </p>
+  </div>
+
+  <div class="more-tools">
+    <h2>More free tools</h2>
+    <ul>
+      <li><a href="dev-toolbox.html">Dev Toolbox</a> — this JSON formatter plus Base64, word counter, case converter, regex tester, diff checker, and Markdown preview, all on one page.</li>
+      <li><a href="generator-hub.html">Generator Hub</a> — QR codes, password generator, UUIDs, random usernames, color palettes.</li>
+      <li><a href="image-toolbox.html">Image & File Toolbox</a> — resize/compress/convert images, merge or split PDFs.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="ad-slot"><!-- AD BANNER SLOT: bottom leaderboard (728x90) -- replace with AdSense ins tag --></div>
+
+<footer>
+  <p>Runs entirely in your browser — nothing you type is uploaded anywhere.</p>
+  <nav><a href="index.html">Home</a> · <a href="about.html">About</a> · <a href="privacy.html">Privacy Policy</a> · <a href="contact.html">Contact</a></nav>
+</footer>
+
+<script src="dev-toolbox.js"></script>
+</body>
+</html>
