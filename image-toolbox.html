@@ -36,6 +36,12 @@
   header h1{font-size:22px;margin:0 0 4px;font-weight:700;}
   header p{color:var(--muted);margin:0 0 16px;font-size:14px;}
   .theme-toggle{background:var(--panel);border:1px solid var(--border);border-radius:999px;width:38px;height:38px;font-size:16px;cursor:pointer;flex:0 0 auto;margin-top:4px;}
+  .header-actions{display:flex;align-items:center;gap:10px;flex:0 0 auto;margin-top:4px;}
+  .home-btn{display:inline-flex;align-items:center;gap:8px;background:var(--panel);border:1px solid var(--border);border-radius:999px;padding:10px 18px;font-size:15px;font-weight:600;color:var(--text);text-decoration:none;white-space:nowrap;min-height:44px;box-sizing:border-box;}
+  .home-btn:hover{border-color:var(--accent);color:var(--accent);}
+  .home-btn svg{width:18px;height:18px;flex:0 0 auto;}
+  footer nav a{padding:6px 4px;display:inline-block;font-size:14px;}
+  .hint{font-size:12px;color:var(--muted);margin:6px 0 0;line-height:1.5;}
   .wrap{max-width:1000px;margin:0 auto;padding:0 16px 40px;}
   .tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;}
   .tab-btn{background:var(--panel);border:1px solid var(--border);color:var(--text);padding:8px 14px;border-radius:8px;cursor:pointer;font-size:13px;}
@@ -89,7 +95,10 @@
     <h1>Image & File Toolbox</h1>
     <p>Resize, compress, and convert images, plus merge or split PDF files — all in one page, processed entirely in your browser.</p>
   </div>
-  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+  <div class="header-actions">
+    <a class="home-btn" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>Home</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+  </div>
 </header>
 
 <div class="wrap">
@@ -114,6 +123,7 @@
           <option value="image/png">PNG</option>
           <option value="image/webp">WebP</option>
         </select>
+        <p class="hint" id="formatHint">JPEG: smaller files, no transparency — best for photos.</p>
       </div>
     </div>
     <div class="check-row"><label><input type="checkbox" id="imgLock" checked> Lock aspect ratio</label></div>
@@ -121,6 +131,7 @@
       <div>
         <label>Quality: <span id="imgQualLabel">0.8</span> (JPEG/WebP only)</label>
         <input type="range" id="imgQuality" min="0.1" max="1" step="0.05" value="0.8" oninput="document.getElementById('imgQualLabel').textContent=this.value">
+        <p class="hint">Lower quality means a smaller file but more visible compression artifacts. PNG ignores this — it's always lossless.</p>
       </div>
     </div>
     <div class="btn-row">
@@ -220,6 +231,15 @@ function fmtBytes(n){
 }
 
 // ---------- Image Resize / Compress / Convert ----------
+var formatHints = {
+  'image/jpeg': 'JPEG: smaller files, no transparency support — best for photos and anything without sharp edges or text.',
+  'image/png': 'PNG: lossless (no quality loss) and supports transparency — best for screenshots, logos, and graphics with text or sharp edges, at the cost of larger file size.',
+  'image/webp': "WebP: usually smaller than both JPEG and PNG at similar quality, and supports transparency too — a good default unless you specifically need JPEG/PNG for compatibility with an older tool."
+};
+document.getElementById('imgFormat').addEventListener('change', function(){
+  document.getElementById('formatHint').textContent = formatHints[this.value];
+});
+
 var origImg = null, origFile = null, resultBlob = null, resultExt = 'jpg';
 document.getElementById('imgFile').addEventListener('change', function(e){
   var file = e.target.files[0];

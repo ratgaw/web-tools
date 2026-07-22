@@ -36,6 +36,12 @@
   header h1{font-size:22px;margin:0 0 4px;font-weight:700;}
   header p{color:var(--muted);margin:0 0 16px;font-size:14px;}
   .theme-toggle{background:var(--panel);border:1px solid var(--border);border-radius:999px;width:38px;height:38px;font-size:16px;cursor:pointer;flex:0 0 auto;margin-top:4px;}
+  .header-actions{display:flex;align-items:center;gap:10px;flex:0 0 auto;margin-top:4px;}
+  .home-btn{display:inline-flex;align-items:center;gap:8px;background:var(--panel);border:1px solid var(--border);border-radius:999px;padding:10px 18px;font-size:15px;font-weight:600;color:var(--text);text-decoration:none;white-space:nowrap;min-height:44px;box-sizing:border-box;}
+  .home-btn:hover{border-color:var(--accent);color:var(--accent);}
+  .home-btn svg{width:18px;height:18px;flex:0 0 auto;}
+  footer nav a{padding:6px 4px;display:inline-block;font-size:14px;}
+  .hint{font-size:12px;color:var(--muted);margin:6px 0 0;line-height:1.5;}
   .wrap{max-width:1000px;margin:0 auto;padding:0 16px 40px;}
   .tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;}
   .tab-btn{background:var(--panel);border:1px solid var(--border);color:var(--text);padding:8px 14px;border-radius:8px;cursor:pointer;font-size:13px;}
@@ -92,7 +98,10 @@
     <h1>Generator Hub</h1>
     <p>QR codes, secure passwords, UUIDs, random usernames, and color palettes — all in one page.</p>
   </div>
-  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+  <div class="header-actions">
+    <a class="home-btn" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>Home</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+  </div>
 </header>
 
 <div class="wrap">
@@ -109,6 +118,7 @@
       <div>
         <label>Error correction</label>
         <select id="qrLevel"><option value="L">L (7%)</option><option value="M" selected>M (15%)</option><option value="Q">Q (25%)</option><option value="H">H (30%)</option></select>
+        <p class="hint">Higher correction lets the code still scan even if part of it is smudged, torn, or covered (e.g. with a logo), but makes the pattern denser. M works for most cases; use Q or H if printing small or expecting wear.</p>
       </div>
     </div>
     <div class="btn-row">
@@ -133,6 +143,7 @@
       <label><input type="checkbox" id="pwSymbols" checked> Symbols (!@#$...)</label>
       <label><input type="checkbox" id="pwAmbiguous"> Exclude ambiguous (l1IO0)</label>
     </div>
+    <p class="hint">"Exclude ambiguous" removes characters that look alike in many fonts — lowercase l, digit 1, uppercase I, uppercase O, and digit 0 — handy if you'll ever need to type the password out by hand.</p>
     <div class="btn-row">
       <button class="btn" onclick="genPassword()">Generate Password</button>
       <button class="btn secondary" onclick="copyText('pwOut')">Copy</button>
@@ -186,6 +197,7 @@
           <option value="triadic">Triadic</option>
           <option value="monochrome">Monochrome</option>
         </select>
+        <p class="hint" id="colorModeHint">Random: five unrelated colors, useful for quick inspiration.</p>
       </div>
     </div>
     <div class="btn-row"><button class="btn" onclick="genPalette()">Generate Palette</button></div>
@@ -384,6 +396,17 @@ function genNames(){
 genNames();
 
 // ---------- Color Palette Generator ----------
+var colorModeHints = {
+  random: 'Random: five unrelated colors, useful for quick inspiration.',
+  complementary: 'Complementary: colors from opposite sides of the color wheel — high contrast, good for making one element (like a button) stand out against another.',
+  analogous: 'Analogous: colors that sit next to each other on the wheel — calm and cohesive, good for a unified look without much contrast.',
+  triadic: 'Triadic: three colors evenly spaced around the wheel — vibrant and balanced, good when you want variety without it feeling random.',
+  monochrome: 'Monochrome: shades and tints of a single hue — minimal and easy to keep consistent, good for a clean, understated look.'
+};
+document.getElementById('colorMode').addEventListener('change', function(){
+  document.getElementById('colorModeHint').textContent = colorModeHints[this.value];
+});
+
 function hslToHex(h,s,l){
   s/=100; l/=100;
   var c = (1-Math.abs(2*l-1))*s;
