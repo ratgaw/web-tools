@@ -34,6 +34,9 @@
   .panel{display:none;background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:20px;}
   .panel.active{display:block;}
   .panel h2{margin-top:0;font-size:16px;}
+  .about-block{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:20px;}
+  .about-block h2{margin-top:0;font-size:16px;}
+  .about-block p{line-height:1.6;}
   textarea, input[type=text], input[type=number], select{
     width:100%;background:var(--bg);color:var(--text);border:1px solid var(--border);
     border-radius:8px;padding:10px;font-family:var(--mono);font-size:13px;resize:vertical;
@@ -62,6 +65,8 @@
   .md-preview pre{background:var(--panel);padding:10px;border-radius:8px;overflow:auto;}
   .md-preview blockquote{border-left:3px solid var(--accent);margin:0;padding-left:12px;color:var(--muted);}
   footer{max-width:1000px;margin:0 auto;padding:0 16px 30px;color:var(--muted);font-size:12px;text-align:center;}
+  footer nav{margin-top:8px;}
+  footer nav a{color:var(--muted);}
 </style>
 </head>
 <body>
@@ -186,9 +191,29 @@ Some **bold** and _italic_ text with a [link](https://example.com).
   </div>
 </div>
 
+<div class="wrap">
+  <div class="about-block">
+    <h2>About this toolkit</h2>
+    <p>This page bundles eight small utilities that come up constantly in everyday development work: a
+    <strong>JSON formatter</strong> to pretty-print and validate API responses, <strong>Base64</strong>
+    encoding/decoding for embedding binary data in text-based formats, a <strong>word and character
+    counter</strong> for meeting content-length limits, a <strong>case converter</strong> for switching
+    text between camelCase, snake_case, kebab-case and more, a <strong>lorem ipsum generator</strong> for
+    mockups and layout testing, a <strong>regex tester</strong> with live match highlighting and capture
+    groups, a line-based <strong>diff checker</strong> for comparing two versions of text, and a lightweight
+    <strong>Markdown previewer</strong>.</p>
+    <p>Every one of these runs as plain JavaScript inside your browser tab — nothing you type or paste is
+    ever transmitted to a server. That makes it safe to use with sensitive text like API keys, internal
+    config, or unpublished content.</p>
+  </div>
+</div>
+
 <div class="ad-slot"><!-- AD BANNER SLOT: bottom leaderboard (728x90) -- replace with AdSense ins tag --></div>
 
-<footer>Runs entirely in your browser — nothing you type is uploaded anywhere.</footer>
+<footer>
+  <p>Runs entirely in your browser — nothing you type is uploaded anywhere.</p>
+  <nav><a href="index.html">Home</a> · <a href="about.html">About</a> · <a href="privacy.html">Privacy Policy</a> · <a href="contact.html">Contact</a></nav>
+</footer>
 
 <script>
 // ---------- Tabs ----------

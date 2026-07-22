@@ -33,6 +33,9 @@
   .panel{display:none;background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:20px;}
   .panel.active{display:block;}
   .panel h2{margin-top:0;font-size:16px;}
+  .about-block{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:20px;}
+  .about-block h2{margin-top:0;font-size:16px;}
+  .about-block p{line-height:1.6;}
   input[type=text], input[type=number], select, input[type=file]{
     width:100%;background:var(--bg);color:var(--text);border:1px solid var(--border);
     border-radius:8px;padding:10px;font-family:var(--mono);font-size:13px;
@@ -56,6 +59,8 @@
   .list-item .actions button{background:none;border:none;color:var(--accent);cursor:pointer;font-size:12px;margin-left:6px;}
   .error{color:#dc2626;font-size:13px;margin-top:8px;}
   footer{max-width:1000px;margin:0 auto;padding:0 16px 30px;color:var(--muted);font-size:12px;text-align:center;}
+  footer nav{margin-top:8px;}
+  footer nav a{color:var(--muted);}
 </style>
 </head>
 <body>
@@ -148,9 +153,28 @@
   </div>
 </div>
 
+<div class="wrap">
+  <div class="about-block">
+    <h2>About this toolkit</h2>
+    <p>These tools handle common image and PDF tasks without installing software or uploading files to a
+    third party. The <strong>image tool</strong> resizes, compresses, and converts between PNG, JPEG, and
+    WebP using your browser's built-in Canvas API — useful for shrinking a photo before uploading it
+    somewhere with a file-size limit, or converting a screenshot to a smaller format. The <strong>PDF
+    tools</strong> use the open-source pdf-lib library to merge several PDFs into one document, or to
+    split a PDF into individual pages, or extract a specific page range (like "pages 2-5 of a 40-page
+    report") into a new file.</p>
+    <p>Because everything runs client-side, your images and documents never leave your device — there's
+    no upload step, which also makes these tools noticeably faster than server-based alternatives for
+    typical file sizes.</p>
+  </div>
+</div>
+
 <div class="ad-slot"><!-- AD BANNER SLOT: bottom leaderboard (728x90) -- replace with AdSense ins tag --></div>
 
-<footer>All processing happens locally in your browser — files are never uploaded to a server.</footer>
+<footer>
+  <p>All processing happens locally in your browser — files are never uploaded to a server.</p>
+  <nav><a href="index.html">Home</a> · <a href="about.html">About</a> · <a href="privacy.html">Privacy Policy</a> · <a href="contact.html">Contact</a></nav>
+</footer>
 
 <script>
 // ---------- Tabs ----------

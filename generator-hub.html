@@ -33,6 +33,9 @@
   .panel{display:none;background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:20px;}
   .panel.active{display:block;}
   .panel h2{margin-top:0;font-size:16px;}
+  .about-block{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:20px;}
+  .about-block h2{margin-top:0;font-size:16px;}
+  .about-block p{line-height:1.6;}
   input[type=text], input[type=number], select{
     width:100%;background:var(--bg);color:var(--text);border:1px solid var(--border);
     border-radius:8px;padding:10px;font-family:var(--mono);font-size:13px;
@@ -59,6 +62,8 @@
   .swatch .fill{height:80px;}
   .swatch .label{padding:8px;font-family:var(--mono);font-size:12px;text-align:center;background:var(--panel);}
   footer{max-width:1000px;margin:0 auto;padding:0 16px 30px;color:var(--muted);font-size:12px;text-align:center;}
+  footer nav{margin-top:8px;}
+  footer nav a{color:var(--muted);}
 </style>
 </head>
 <body>
@@ -168,9 +173,28 @@
   </div>
 </div>
 
+<div class="wrap">
+  <div class="about-block">
+    <h2>About this toolkit</h2>
+    <p>This page brings together five generators people reach for constantly: a <strong>QR code
+    generator</strong> for encoding URLs or text into a scannable image, a <strong>password
+    generator</strong> that draws from your browser's cryptographically secure random number generator
+    (not a weak Math.random), a <strong>UUID v4 generator</strong> for unique identifiers in code and
+    databases, a <strong>random username/display name generator</strong> for test data and placeholders,
+    and a <strong>color palette generator</strong> that builds complementary, analogous, triadic, or
+    monochrome color schemes for design work.</p>
+    <p>As with the rest of this site, every generator runs locally in your browser — passwords and UUIDs
+    are never transmitted anywhere, which matters since these are exactly the kind of values you don't
+    want passing through a third-party server.</p>
+  </div>
+</div>
+
 <div class="ad-slot"><!-- AD BANNER SLOT: bottom leaderboard (728x90) -- replace with AdSense ins tag --></div>
 
-<footer>Passwords and UUIDs are generated locally using your browser's cryptographic RNG — nothing is sent to a server.</footer>
+<footer>
+  <p>Passwords and UUIDs are generated locally using your browser's cryptographic RNG — nothing is sent to a server.</p>
+  <nav><a href="index.html">Home</a> · <a href="about.html">About</a> · <a href="privacy.html">Privacy Policy</a> · <a href="contact.html">Contact</a></nav>
+</footer>
 
 <script>
 // ---------- Tabs ----------
