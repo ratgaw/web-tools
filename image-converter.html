@@ -3,11 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Image & File Toolbox — Resize, Compress, Convert, Merge & Split PDFs</title>
-<meta name="description" content="Free online image and PDF tools: resize/compress/convert images (PNG, JPEG, WebP), merge PDFs, and split or extract PDF pages.">
+<title>Free Image Resizer, Compressor & Converter Online (PNG, JPEG, WebP)</title>
+<meta name="description" content="Resize, compress, and convert images between PNG, JPEG, and WebP online for free — runs entirely in your browser, no upload required.">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2150962689885624"
      crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
 <script src="theme.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,8 +22,8 @@
 
 <header>
   <div>
-    <h1>Image & File Toolbox</h1>
-    <p>Resize, compress, and convert images, plus merge or split PDF files — all in one page, processed entirely in your browser.</p>
+    <h1>Free Image Resizer, Compressor & Converter</h1>
+    <p>Resize, compress, and convert between PNG, JPEG, and WebP — right in your browser.</p>
   </div>
   <div class="header-actions">
     <a class="home-btn" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>Home</a>
@@ -33,7 +32,11 @@
 </header>
 
 <div class="wrap">
-  <div class="tabs" id="tabs"></div>
+  <p class="intro-text">
+    Upload an image, set the width/height and output format you need, and download the result — no
+    account, no watermark, no upload to a remote server. Handy for shrinking a photo before uploading it
+    somewhere with a file-size limit, or converting a screenshot to a smaller format.
+  </p>
 
   <div class="panel active" data-panel="image">
     <h2>Image Resize / Compress / Convert</h2>
@@ -82,55 +85,38 @@
         <div class="meta" id="imgResultMeta"></div>
       </div>
     </div>
-    <p class="hint">Prefer a page with just this tool? Try the <a href="image-converter.html">standalone Image Converter</a>.</p>
-  </div>
-
-  <div class="panel" data-panel="merge">
-    <h2>Merge PDFs</h2>
-    <input type="file" id="pdfMergeFiles" accept="application/pdf" multiple>
-    <div class="meta">Select two or more PDFs — they'll be combined in the order shown below (use ↑/↓ to reorder).</div>
-    <div id="pdfMergeList" style="margin-top:12px;"></div>
-    <div class="btn-row"><button class="btn" id="pdfMergeBtn" onclick="mergePDFs()" disabled>Merge & Download</button></div>
-    <div id="pdfMergeError" class="error"></div>
-    <p class="hint">Prefer a page with just this tool? Try the <a href="merge-pdf.html">standalone Merge PDF</a>.</p>
-  </div>
-
-  <div class="panel" data-panel="split">
-    <h2>Split / Extract PDF Pages</h2>
-    <input type="file" id="pdfSplitFile" accept="application/pdf">
-    <div class="row">
-      <div>
-        <label>Mode</label>
-        <select id="pdfSplitMode" onchange="toggleSplitMode()">
-          <option value="range">Extract page range into one PDF</option>
-          <option value="all">Split into individual single-page PDFs</option>
-        </select>
-      </div>
-      <div id="pdfRangeWrap">
-        <label>Pages (e.g. 1-3,5,8)</label>
-        <input type="text" id="pdfRange" placeholder="1-3,5">
-      </div>
-    </div>
-    <div class="btn-row"><button class="btn" id="pdfSplitBtn" onclick="splitPDF()" disabled>Process PDF</button></div>
-    <div id="pdfSplitError" class="error"></div>
-    <div id="pdfSplitOut" style="margin-top:12px;"></div>
-    <p class="hint">Prefer a page with just this tool? Try the <a href="split-pdf.html">standalone Split PDF</a>.</p>
   </div>
 </div>
 
 <div class="wrap">
   <div class="about-block">
-    <h2>About this toolkit</h2>
-    <p>These tools handle common image and PDF tasks without installing software or uploading files to a
-    third party. The <strong>image tool</strong> resizes, compresses, and converts between PNG, JPEG, and
-    WebP using your browser's built-in Canvas API — useful for shrinking a photo before uploading it
-    somewhere with a file-size limit, or converting a screenshot to a smaller format. The <strong>PDF
-    tools</strong> use the open-source pdf-lib library to merge several PDFs into one document, or to
-    split a PDF into individual pages, or extract a specific page range (like "pages 2-5 of a 40-page
-    report") into a new file.</p>
-    <p>Because everything runs client-side, your images and documents never leave your device — there's
-    no upload step, which also makes these tools noticeably faster than server-based alternatives for
-    typical file sizes.</p>
+    <h2>Choosing between JPEG, PNG, and WebP</h2>
+    <p>
+      <strong>JPEG</strong> uses lossy compression and no transparency, making it the smallest choice for
+      photos and anything without sharp edges or text. <strong>PNG</strong> is lossless and supports
+      transparency, so it's the right call for screenshots, logos, and graphics with text or hard edges —
+      at the cost of a larger file. <strong>WebP</strong> is usually smaller than both at similar visual
+      quality and supports transparency too, making it a solid default unless you specifically need
+      JPEG/PNG for compatibility with an older tool or platform.
+    </p>
+    <p>
+      Resizing happens through your browser's Canvas API — pick a width or height (with "lock aspect
+      ratio" on, the other dimension follows automatically) and the image is redrawn at that size before
+      being re-encoded in your chosen format and quality.
+    </p>
+    <p>
+      Because everything happens locally, your photos never leave your device — there's no upload step,
+      which also makes this noticeably faster than server-based converters for typical file sizes.
+    </p>
+  </div>
+
+  <div class="more-tools">
+    <h2>More free tools</h2>
+    <ul>
+      <li><a href="image-toolbox.html">Image & File Toolbox</a> — this image converter plus PDF merge and split, all on one page.</li>
+      <li><a href="merge-pdf.html">Merge PDF</a> — combine multiple PDF files into one.</li>
+      <li><a href="split-pdf.html">Split PDF</a> — extract pages or split a PDF into individual files.</li>
+    </ul>
   </div>
 </div>
 

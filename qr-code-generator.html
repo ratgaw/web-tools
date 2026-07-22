@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free QR Code Generator Online — No Sign-Up</title>
+<meta name="description" content="Generate a QR code from any URL or text for free. Choose size and error-correction level, then download it as a PNG — runs entirely in your browser, nothing is uploaded.">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2150962689885624"
+     crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="theme.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="generator-hub.css">
+</head>
+<body>
+
+<aside class="ad-rail ad-rail-left"><!-- AD BANNER SLOT: left skyscraper (160x600) -- replace with AdSense ins tag --></aside>
+<aside class="ad-rail ad-rail-right"><!-- AD BANNER SLOT: right skyscraper (160x600) -- replace with AdSense ins tag --></aside>
+
+<div class="ad-slot"><!-- AD BANNER SLOT: top leaderboard (728x90) -- replace with AdSense ins tag --></div>
+
+<header>
+  <div>
+    <h1>Free QR Code Generator</h1>
+    <p>Turn any URL or text into a scannable QR code, sized and error-corrected the way you need.</p>
+  </div>
+  <div class="header-actions">
+    <a class="home-btn" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>Home</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+  </div>
+</header>
+
+<div class="wrap">
+  <p class="intro-text">
+    Paste a URL, Wi-Fi password, contact card, or any other text below and generate a scannable QR code
+    instantly. Pick the pixel size you need and an error-correction level, then download it as a PNG for
+    print or web use.
+  </p>
+
+  <div class="panel active" data-panel="qr">
+    <h2>QR Code Generator</h2>
+    <input type="text" id="qrText" placeholder="Enter URL or text" value="https://example.com">
+    <div class="row">
+      <div>
+        <label>Size (px)</label>
+        <select id="qrSize"><option>128</option><option selected>200</option><option>300</option><option>400</option></select>
+      </div>
+      <div>
+        <label>Error correction</label>
+        <select id="qrLevel"><option value="L">L (7%)</option><option value="M" selected>M (15%)</option><option value="Q">Q (25%)</option><option value="H">H (30%)</option></select>
+        <p class="hint">Higher correction lets the code still scan even if part of it is smudged, torn, or covered (e.g. with a logo), but makes the pattern denser. M works for most cases; use Q or H if printing small or expecting wear.</p>
+      </div>
+    </div>
+    <div class="btn-row">
+      <button class="btn" onclick="genQR()">Generate QR Code</button>
+      <button class="btn secondary" onclick="downloadQR()">Download PNG</button>
+    </div>
+    <div id="qrOutput"></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="about-block">
+    <h2>How this QR code generator works</h2>
+    <p>
+      A QR code stores data — most often a URL, but also plain text, Wi-Fi credentials, or contact
+      details — as a pattern of black-and-white squares that any phone camera can scan. This tool encodes
+      whatever you type into that pattern locally in your browser and renders it as an image you can
+      download and use anywhere: business cards, posters, packaging, presentation slides, or a link on a
+      web page.
+    </p>
+    <p>
+      <strong>Error correction</strong> controls how much of the code can be damaged, obscured, or
+      misprinted and still scan successfully — useful if you're printing small, on a textured surface, or
+      placing a logo in the middle of the code. Higher levels make the pattern denser (which can make very
+      short text harder to read at small sizes), so M is a reasonable default unless you have a specific
+      reason to go higher.
+    </p>
+    <p>
+      Nothing you type is sent to a server — the QR code is generated and rendered entirely in your
+      browser, so it's safe to use for private links, internal Wi-Fi passwords, or anything else you
+      wouldn't want passing through a third party.
+    </p>
+  </div>
+
+  <div class="more-tools">
+    <h2>More free tools</h2>
+    <ul>
+      <li><a href="generator-hub.html">Generator Hub</a> — this QR generator plus password generator, UUID generator, username generator, and color palette generator, all on one page.</li>
+      <li><a href="dev-toolbox.html">Dev Toolbox</a> — JSON formatter, Base64, word counter, case converter, regex tester, diff checker, and more.</li>
+      <li><a href="image-toolbox.html">Image & File Toolbox</a> — resize/compress/convert images, merge or split PDFs.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="ad-slot"><!-- AD BANNER SLOT: bottom leaderboard (728x90) -- replace with AdSense ins tag --></div>
+
+<footer>
+  <p>Runs entirely in your browser — nothing you type is uploaded anywhere.</p>
+  <nav><a href="index.html">Home</a> · <a href="about.html">About</a> · <a href="privacy.html">Privacy Policy</a> · <a href="contact.html">Contact</a></nav>
+</footer>
+
+<script src="generator-hub.js"></script>
+</body>
+</html>

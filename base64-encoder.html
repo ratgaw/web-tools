@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Base64 Encoder & Decoder Online</title>
+<meta name="description" content="Encode text to Base64 or decode Base64 back to text online for free — supports full Unicode, runs entirely in your browser, nothing is uploaded.">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2150962689885624"
+     crossorigin="anonymous"></script>
+<script src="theme.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="dev-toolbox.css">
+</head>
+<body>
+
+<aside class="ad-rail ad-rail-left"><!-- AD BANNER SLOT: left skyscraper (160x600) -- replace with AdSense ins tag --></aside>
+<aside class="ad-rail ad-rail-right"><!-- AD BANNER SLOT: right skyscraper (160x600) -- replace with AdSense ins tag --></aside>
+
+<div class="ad-slot"><!-- AD BANNER SLOT: top leaderboard (728x90) -- replace with AdSense ins tag --></div>
+
+<header>
+  <div>
+    <h1>Free Base64 Encoder & Decoder</h1>
+    <p>Encode text to Base64 or decode it back — full Unicode support, right in your browser.</p>
+  </div>
+  <div class="header-actions">
+    <a class="home-btn" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>Home</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+  </div>
+</header>
+
+<div class="wrap">
+  <p class="intro-text">
+    Paste text and encode it to Base64, or paste Base64 and decode it back to readable text. Handles full
+    Unicode correctly (emoji, accented characters, non-Latin scripts), not just ASCII.
+  </p>
+
+  <div class="panel active" data-panel="base64">
+    <h2>Base64 Encode / Decode</h2>
+    <textarea id="b64In" placeholder="Type or paste text..."></textarea>
+    <div class="btn-row">
+      <button class="btn" onclick="b64Encode()">Encode</button>
+      <button class="btn secondary" onclick="b64Decode()">Decode</button>
+      <button class="btn secondary" onclick="copyText('b64Out')">Copy Output</button>
+    </div>
+    <div id="b64Err" class="error"></div>
+    <textarea id="b64Out" class="out" readonly></textarea>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="about-block">
+    <h2>What Base64 is for</h2>
+    <p>
+      Base64 turns arbitrary binary data into plain ASCII text, using only letters, digits, and
+      <code>+ / =</code>. It doesn't compress or encrypt anything — it's purely a way to safely embed
+      binary-ish data inside formats that only handle text: JSON payloads, URLs, email attachments (MIME),
+      HTTP Basic Auth headers, or small images inlined directly into CSS/HTML as data URIs.
+    </p>
+    <p>
+      A common gotcha with naive Base64 implementations is mangling non-ASCII text — this tool encodes
+      through UTF-8 first, so emoji, accented letters, and non-Latin scripts round-trip correctly through
+      encode and decode.
+    </p>
+    <p>
+      Everything happens locally in your browser tab, so it's fine to use with API tokens, credentials, or
+      anything else you wouldn't want passing through a server.
+    </p>
+  </div>
+
+  <div class="more-tools">
+    <h2>More free tools</h2>
+    <ul>
+      <li><a href="dev-toolbox.html">Dev Toolbox</a> — this Base64 tool plus JSON formatter, word counter, regex tester, diff checker, and more, all on one page.</li>
+      <li><a href="json-formatter.html">JSON Formatter</a> — pretty-print, minify, and validate JSON.</li>
+      <li><a href="regex-tester.html">Regex Tester</a> — test patterns with live match highlighting.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="ad-slot"><!-- AD BANNER SLOT: bottom leaderboard (728x90) -- replace with AdSense ins tag --></div>
+
+<footer>
+  <p>Runs entirely in your browser — nothing you type is uploaded anywhere.</p>
+  <nav><a href="index.html">Home</a> · <a href="about.html">About</a> · <a href="privacy.html">Privacy Policy</a> · <a href="contact.html">Contact</a></nav>
+</footer>
+
+<script src="dev-toolbox.js"></script>
+</body>
+</html>

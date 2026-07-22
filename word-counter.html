@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Word & Character Counter Online</title>
+<meta name="description" content="Count words, characters, sentences, and paragraphs online for free, with an estimated reading time — updates live as you type, nothing is uploaded.">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2150962689885624"
+     crossorigin="anonymous"></script>
+<script src="theme.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="dev-toolbox.css">
+</head>
+<body>
+
+<aside class="ad-rail ad-rail-left"><!-- AD BANNER SLOT: left skyscraper (160x600) -- replace with AdSense ins tag --></aside>
+<aside class="ad-rail ad-rail-right"><!-- AD BANNER SLOT: right skyscraper (160x600) -- replace with AdSense ins tag --></aside>
+
+<div class="ad-slot"><!-- AD BANNER SLOT: top leaderboard (728x90) -- replace with AdSense ins tag --></div>
+
+<header>
+  <div>
+    <h1>Free Word & Character Counter</h1>
+    <p>Live word, character, sentence, and paragraph counts, plus an estimated reading time.</p>
+  </div>
+  <div class="header-actions">
+    <a class="home-btn" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>Home</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+  </div>
+</header>
+
+<div class="wrap">
+  <p class="intro-text">
+    Paste or type text below and every count updates as you go — useful for meeting a word-count minimum
+    or maximum on an essay, meta description, tweet, or cover letter.
+  </p>
+
+  <div class="panel active" data-panel="words">
+    <h2>Word & Character Counter</h2>
+    <textarea id="wcIn" placeholder="Start typing or paste text..." oninput="wordCount()"></textarea>
+    <div class="stats">
+      <div class="stat"><div class="num" id="wcWords">0</div><div class="lbl">Words</div></div>
+      <div class="stat"><div class="num" id="wcChars">0</div><div class="lbl">Characters</div></div>
+      <div class="stat"><div class="num" id="wcCharsNoSpace">0</div><div class="lbl">No Spaces</div></div>
+      <div class="stat"><div class="num" id="wcSentences">0</div><div class="lbl">Sentences</div></div>
+      <div class="stat"><div class="num" id="wcParagraphs">0</div><div class="lbl">Paragraphs</div></div>
+      <div class="stat"><div class="num" id="wcReadTime">0s</div><div class="lbl">Read Time</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="about-block">
+    <h2>How the counts are calculated</h2>
+    <p>
+      <strong>Words</strong> are counted by splitting on whitespace, so hyphenated words and contractions
+      count as one word each. <strong>Sentences</strong> are counted by looking for text ending in
+      <code>.</code>, <code>!</code>, or <code>?</code> — it's a simple heuristic, so abbreviations with
+      periods can occasionally throw the count off by one or two. <strong>Paragraphs</strong> are counted
+      as blocks of text separated by a blank line. <strong>Read time</strong> is estimated at 200 words
+      per minute, a common average adult silent-reading speed.
+    </p>
+    <p>
+      Common uses: staying under a Twitter/X character limit, hitting a minimum word count for an
+      assignment, checking a meta description fits Google's ~155-character display limit, or estimating
+      how long a blog post or script will take to read aloud.
+    </p>
+  </div>
+
+  <div class="more-tools">
+    <h2>More free tools</h2>
+    <ul>
+      <li><a href="dev-toolbox.html">Dev Toolbox</a> — this counter plus JSON formatter, Base64, case converter, regex tester, and more, all on one page.</li>
+      <li><a href="case-converter.html">Case Converter</a> — switch text between camelCase, snake_case, and more.</li>
+      <li><a href="diff-checker.html">Diff Checker</a> — compare two versions of text line by line.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="ad-slot"><!-- AD BANNER SLOT: bottom leaderboard (728x90) -- replace with AdSense ins tag --></div>
+
+<footer>
+  <p>Runs entirely in your browser — nothing you type is uploaded anywhere.</p>
+  <nav><a href="index.html">Home</a> · <a href="about.html">About</a> · <a href="privacy.html">Privacy Policy</a> · <a href="contact.html">Contact</a></nav>
+</footer>
+
+<script src="dev-toolbox.js"></script>
+</body>
+</html>

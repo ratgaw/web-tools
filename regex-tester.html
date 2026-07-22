@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Regex Tester Online — Live Match Highlighting</title>
+<meta name="description" content="Test regular expressions online for free with live match highlighting and capture groups — runs entirely in your browser, nothing is uploaded.">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2150962689885624"
+     crossorigin="anonymous"></script>
+<script src="theme.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="dev-toolbox.css">
+</head>
+<body>
+
+<aside class="ad-rail ad-rail-left"><!-- AD BANNER SLOT: left skyscraper (160x600) -- replace with AdSense ins tag --></aside>
+<aside class="ad-rail ad-rail-right"><!-- AD BANNER SLOT: right skyscraper (160x600) -- replace with AdSense ins tag --></aside>
+
+<div class="ad-slot"><!-- AD BANNER SLOT: top leaderboard (728x90) -- replace with AdSense ins tag --></div>
+
+<header>
+  <div>
+    <h1>Free Regex Tester</h1>
+    <p>Test a pattern against real text with live match highlighting and capture groups.</p>
+  </div>
+  <div class="header-actions">
+    <a class="home-btn" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>Home</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+  </div>
+</header>
+
+<div class="wrap">
+  <p class="intro-text">
+    Enter a JavaScript-flavored regular expression and a test string, and see every match highlighted
+    live, along with each match's index and any capture groups — useful for building and debugging a
+    pattern before dropping it into code.
+  </p>
+
+  <div class="panel active" data-panel="regex">
+    <h2>Regex Tester</h2>
+    <div class="row">
+      <input type="text" id="regexPattern" placeholder="Pattern, e.g. \b\w+@\w+\.\w+\b">
+      <input type="text" id="regexFlags" placeholder="Flags, e.g. gi" style="max-width:100px">
+    </div>
+    <p class="hint">Common flags: <strong>g</strong> matches every occurrence instead of stopping at the first, <strong>i</strong> ignores upper/lower case, <strong>m</strong> makes ^ and $ match the start/end of each line instead of the whole string, <strong>s</strong> lets . also match newlines.</p>
+    <textarea id="regexInput" placeholder="Test string..."></textarea>
+    <div class="btn-row"><button class="btn" onclick="regexTest()">Test</button></div>
+    <div id="regexErr" class="error"></div>
+    <div id="regexHighlight" class="md-preview" style="font-family:var(--mono);white-space:pre-wrap;"></div>
+    <div id="regexMatches"></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="about-block">
+    <h2>How to read the results</h2>
+    <p>
+      Matches are highlighted directly in your test string as you run the pattern, and listed individually
+      below with the exact substring matched, its starting index, and any capture groups (the parts of the
+      pattern wrapped in parentheses) — useful for confirming a pattern extracts exactly the piece of data
+      you expect, like the domain from an email address or the number from a formatted string.
+    </p>
+    <p>
+      This uses JavaScript's native <code>RegExp</code> engine — the same engine your pattern will run
+      against if you're testing something destined for browser or Node.js code — so behavior matches
+      exactly what you'll see in production, including edge cases around greedy vs. lazy quantifiers and
+      flag interactions.
+    </p>
+  </div>
+
+  <div class="more-tools">
+    <h2>More free tools</h2>
+    <ul>
+      <li><a href="dev-toolbox.html">Dev Toolbox</a> — this regex tester plus JSON formatter, Base64, diff checker, and more, all on one page.</li>
+      <li><a href="diff-checker.html">Diff Checker</a> — compare two versions of text line by line.</li>
+      <li><a href="json-formatter.html">JSON Formatter</a> — pretty-print, minify, and validate JSON.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="ad-slot"><!-- AD BANNER SLOT: bottom leaderboard (728x90) -- replace with AdSense ins tag --></div>
+
+<footer>
+  <p>Runs entirely in your browser — nothing you type is uploaded anywhere.</p>
+  <nav><a href="index.html">Home</a> · <a href="about.html">About</a> · <a href="privacy.html">Privacy Policy</a> · <a href="contact.html">Contact</a></nav>
+</footer>
+
+<script src="dev-toolbox.js"></script>
+</body>
+</html>

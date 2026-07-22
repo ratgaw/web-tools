@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Merge PDF Online — Combine PDF Files</title>
+<meta name="description" content="Merge multiple PDF files into one online for free. Reorder pages before combining — runs entirely in your browser, no upload required.">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2150962689885624"
+     crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+<script src="theme.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="image-toolbox.css">
+</head>
+<body>
+
+<aside class="ad-rail ad-rail-left"><!-- AD BANNER SLOT: left skyscraper (160x600) -- replace with AdSense ins tag --></aside>
+<aside class="ad-rail ad-rail-right"><!-- AD BANNER SLOT: right skyscraper (160x600) -- replace with AdSense ins tag --></aside>
+
+<div class="ad-slot"><!-- AD BANNER SLOT: top leaderboard (728x90) -- replace with AdSense ins tag --></div>
+
+<header>
+  <div>
+    <h1>Free Merge PDF Online</h1>
+    <p>Combine multiple PDF files into one, in whatever order you choose.</p>
+  </div>
+  <div class="header-actions">
+    <a class="home-btn" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>Home</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+  </div>
+</header>
+
+<div class="wrap">
+  <p class="intro-text">
+    Select two or more PDF files, put them in the order you want using the ↑/↓ buttons, and merge them
+    into a single downloadable PDF. Nothing is uploaded anywhere — the merge happens entirely in your
+    browser tab.
+  </p>
+
+  <div class="panel active" data-panel="merge">
+    <h2>Merge PDFs</h2>
+    <input type="file" id="pdfMergeFiles" accept="application/pdf" multiple>
+    <div class="meta">Select two or more PDFs — they'll be combined in the order shown below (use ↑/↓ to reorder).</div>
+    <div id="pdfMergeList" style="margin-top:12px;"></div>
+    <div class="btn-row"><button class="btn" id="pdfMergeBtn" onclick="mergePDFs()" disabled>Merge & Download</button></div>
+    <div id="pdfMergeError" class="error"></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="about-block">
+    <h2>How PDF merging works here</h2>
+    <p>
+      This tool uses <a href="https://pdf-lib.js.org/" target="_blank" rel="noopener">pdf-lib</a>, an
+      open-source library, to copy every page from each selected PDF into one new document, in the order
+      you arrange them. Common uses: combining scanned pages into a single file, stitching together
+      chapters or sections that were exported separately, or assembling a set of reports into one document
+      to send.
+    </p>
+    <p>
+      Because it runs client-side, there's no file-size limit imposed by a server upload, and your
+      documents — which might contain sensitive contracts, records, or personal information — never leave
+      your device.
+    </p>
+  </div>
+
+  <div class="more-tools">
+    <h2>More free tools</h2>
+    <ul>
+      <li><a href="image-toolbox.html">Image & File Toolbox</a> — this PDF merger plus image resize/convert and PDF split, all on one page.</li>
+      <li><a href="split-pdf.html">Split PDF</a> — extract pages or split a PDF into individual files.</li>
+      <li><a href="image-converter.html">Image Converter</a> — resize, compress, and convert PNG/JPEG/WebP.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="ad-slot"><!-- AD BANNER SLOT: bottom leaderboard (728x90) -- replace with AdSense ins tag --></div>
+
+<footer>
+  <p>All processing happens locally in your browser — files are never uploaded to a server.</p>
+  <nav><a href="index.html">Home</a> · <a href="about.html">About</a> · <a href="privacy.html">Privacy Policy</a> · <a href="contact.html">Contact</a></nav>
+</footer>
+
+<script src="image-toolbox.js"></script>
+</body>
+</html>

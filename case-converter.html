@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Case Converter Online (camelCase, snake_case, kebab-case & More)</title>
+<meta name="description" content="Convert text between UPPERCASE, lowercase, Title Case, Sentence case, camelCase, snake_case, and kebab-case online for free — runs entirely in your browser.">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2150962689885624"
+     crossorigin="anonymous"></script>
+<script src="theme.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="dev-toolbox.css">
+</head>
+<body>
+
+<aside class="ad-rail ad-rail-left"><!-- AD BANNER SLOT: left skyscraper (160x600) -- replace with AdSense ins tag --></aside>
+<aside class="ad-rail ad-rail-right"><!-- AD BANNER SLOT: right skyscraper (160x600) -- replace with AdSense ins tag --></aside>
+
+<div class="ad-slot"><!-- AD BANNER SLOT: top leaderboard (728x90) -- replace with AdSense ins tag --></div>
+
+<header>
+  <div>
+    <h1>Free Case Converter</h1>
+    <p>Switch text between UPPERCASE, lowercase, Title Case, camelCase, snake_case, and kebab-case.</p>
+  </div>
+  <div class="header-actions">
+    <a class="home-btn" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>Home</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+  </div>
+</header>
+
+<div class="wrap">
+  <p class="intro-text">
+    Paste text and convert it to any of seven common cases with one click — handy for renaming a variable
+    across naming conventions, fixing accidentally-caps-locked text, or formatting a heading.
+  </p>
+
+  <div class="panel active" data-panel="case">
+    <h2>Case Converter</h2>
+    <textarea id="caseIn" placeholder="Type or paste text..."></textarea>
+    <div class="btn-row">
+      <button class="btn secondary" onclick="caseConvert('upper')">UPPERCASE</button>
+      <button class="btn secondary" onclick="caseConvert('lower')">lowercase</button>
+      <button class="btn secondary" onclick="caseConvert('title')">Title Case</button>
+      <button class="btn secondary" onclick="caseConvert('sentence')">Sentence case</button>
+      <button class="btn secondary" onclick="caseConvert('camel')">camelCase</button>
+      <button class="btn secondary" onclick="caseConvert('snake')">snake_case</button>
+      <button class="btn secondary" onclick="caseConvert('kebab')">kebab-case</button>
+    </div>
+    <textarea id="caseOut" class="out" readonly></textarea>
+    <div class="btn-row"><button class="btn secondary" onclick="copyText('caseOut')">Copy Output</button></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="about-block">
+    <h2>When to use each case</h2>
+    <p>
+      <strong>camelCase</strong> and <strong>snake_case</strong> are the two most common variable-naming
+      conventions in code — camelCase in JavaScript, Java, and C-family languages, snake_case in Python,
+      Ruby, and most database column names. <strong>kebab-case</strong> is standard for URLs, CSS class
+      names, and HTML attributes. <strong>Title Case</strong> and <strong>Sentence case</strong> are for
+      prose — headings and titles versus regular sentences. <strong>UPPERCASE</strong> and
+      <strong>lowercase</strong> cover the simple cases, like fixing text someone sent with caps lock on.
+    </p>
+    <p>
+      This is a straightforward find-and-transform operation with no external calls — text never leaves
+      your browser tab.
+    </p>
+  </div>
+
+  <div class="more-tools">
+    <h2>More free tools</h2>
+    <ul>
+      <li><a href="dev-toolbox.html">Dev Toolbox</a> — this converter plus JSON formatter, Base64, word counter, regex tester, and more, all on one page.</li>
+      <li><a href="word-counter.html">Word Counter</a> — live word, character, and sentence counts.</li>
+      <li><a href="base64-encoder.html">Base64 Encoder</a> — encode or decode Base64 text.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="ad-slot"><!-- AD BANNER SLOT: bottom leaderboard (728x90) -- replace with AdSense ins tag --></div>
+
+<footer>
+  <p>Runs entirely in your browser — nothing you type is uploaded anywhere.</p>
+  <nav><a href="index.html">Home</a> · <a href="about.html">About</a> · <a href="privacy.html">Privacy Policy</a> · <a href="contact.html">Contact</a></nav>
+</footer>
+
+<script src="dev-toolbox.js"></script>
+</body>
+</html>

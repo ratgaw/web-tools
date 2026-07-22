@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Color Palette Generator Online</title>
+<meta name="description" content="Generate color palettes online for free — complementary, analogous, triadic, or monochrome schemes with hex codes ready to copy.">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2150962689885624"
+     crossorigin="anonymous"></script>
+<script src="theme.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="generator-hub.css">
+</head>
+<body>
+
+<aside class="ad-rail ad-rail-left"><!-- AD BANNER SLOT: left skyscraper (160x600) -- replace with AdSense ins tag --></aside>
+<aside class="ad-rail ad-rail-right"><!-- AD BANNER SLOT: right skyscraper (160x600) -- replace with AdSense ins tag --></aside>
+
+<div class="ad-slot"><!-- AD BANNER SLOT: top leaderboard (728x90) -- replace with AdSense ins tag --></div>
+
+<header>
+  <div>
+    <h1>Free Color Palette Generator</h1>
+    <p>Generate five-color palettes with hex codes, using real color-theory relationships — not just random hues.</p>
+  </div>
+  <div class="header-actions">
+    <a class="home-btn" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>Home</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+  </div>
+</header>
+
+<div class="wrap">
+  <p class="intro-text">
+    Pick a color harmony below and generate a five-color palette with hex codes — click any swatch to
+    copy its code. Useful for picking a coordinated color scheme for a website, app, or design project
+    without needing a design background.
+  </p>
+
+  <div class="panel active" data-panel="colors">
+    <h2>Color Palette Generator</h2>
+    <div class="row">
+      <div>
+        <label>Harmony</label>
+        <select id="colorMode">
+          <option value="random">Random</option>
+          <option value="complementary">Complementary</option>
+          <option value="analogous">Analogous</option>
+          <option value="triadic">Triadic</option>
+          <option value="monochrome">Monochrome</option>
+        </select>
+        <p class="hint" id="colorModeHint">Random: five unrelated colors, useful for quick inspiration.</p>
+      </div>
+    </div>
+    <div class="btn-row"><button class="btn" onclick="genPalette()">Generate Palette</button></div>
+    <div class="swatches" id="paletteOut"></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="about-block">
+    <h2>How these color harmonies work</h2>
+    <p>
+      Each mode picks hues using a real relationship on the color wheel rather than pure randomness:
+      <strong>complementary</strong> pairs opposite hues for maximum contrast (good for a call-to-action
+      button against a background), <strong>analogous</strong> picks neighboring hues for a calm, cohesive
+      feel, <strong>triadic</strong> spaces three hues evenly for vibrant variety without clashing, and
+      <strong>monochrome</strong> varies only the lightness of a single hue for a minimal, tightly
+      controlled look. <strong>Random</strong> skips the theory entirely for quick, unstructured
+      inspiration.
+    </p>
+    <p>
+      Every swatch shows its hex code, which you can click to copy directly — paste it straight into CSS,
+      a design tool, or a style guide. Regenerating gives you a new palette in the same harmony, so you can
+      keep rolling until something clicks.
+    </p>
+  </div>
+
+  <div class="more-tools">
+    <h2>More free tools</h2>
+    <ul>
+      <li><a href="generator-hub.html">Generator Hub</a> — this color generator plus QR codes, passwords, UUIDs, and username generator, all on one page.</li>
+      <li><a href="qr-code-generator.html">QR Code Generator</a> — turn any URL or text into a scannable code.</li>
+      <li><a href="image-toolbox.html">Image & File Toolbox</a> — resize, compress, and convert images.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="ad-slot"><!-- AD BANNER SLOT: bottom leaderboard (728x90) -- replace with AdSense ins tag --></div>
+
+<footer>
+  <p>Runs entirely in your browser — nothing you generate is uploaded anywhere.</p>
+  <nav><a href="index.html">Home</a> · <a href="about.html">About</a> · <a href="privacy.html">Privacy Policy</a> · <a href="contact.html">Contact</a></nav>
+</footer>
+
+<script src="generator-hub.js"></script>
+</body>
+</html>

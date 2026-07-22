@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Diff Checker Online — Compare Text Line by Line</title>
+<meta name="description" content="Compare two blocks of text online for free and see line-by-line additions and removals highlighted — runs entirely in your browser, nothing is uploaded.">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2150962689885624"
+     crossorigin="anonymous"></script>
+<script src="theme.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="dev-toolbox.css">
+</head>
+<body>
+
+<aside class="ad-rail ad-rail-left"><!-- AD BANNER SLOT: left skyscraper (160x600) -- replace with AdSense ins tag --></aside>
+<aside class="ad-rail ad-rail-right"><!-- AD BANNER SLOT: right skyscraper (160x600) -- replace with AdSense ins tag --></aside>
+
+<div class="ad-slot"><!-- AD BANNER SLOT: top leaderboard (728x90) -- replace with AdSense ins tag --></div>
+
+<header>
+  <div>
+    <h1>Free Diff Checker</h1>
+    <p>Compare two versions of text and see exactly what changed, line by line.</p>
+  </div>
+  <div class="header-actions">
+    <a class="home-btn" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>Home</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+  </div>
+</header>
+
+<div class="wrap">
+  <p class="intro-text">
+    Paste the original text on the left and the changed version on the right, then compare — lines that
+    were removed are highlighted in red, lines that were added are highlighted in green, and unchanged
+    lines are shown in between for context.
+  </p>
+
+  <div class="panel active" data-panel="diff">
+    <h2>Diff Checker</h2>
+    <div class="row">
+      <textarea id="diffA" placeholder="Original text"></textarea>
+      <textarea id="diffB" placeholder="Changed text"></textarea>
+    </div>
+    <div class="btn-row"><button class="btn" onclick="diffCompare()">Compare</button></div>
+    <div id="diffOut" class="out"></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="about-block">
+    <h2>How the comparison works</h2>
+    <p>
+      This tool finds the longest common subsequence of lines shared between the two texts, then reports
+      everything else as either removed (only in the original) or added (only in the new version) —
+      the same underlying approach used by <code>git diff</code> and most source-control tools, just
+      applied to any plain text rather than code specifically.
+    </p>
+    <p>
+      Useful for comparing two drafts of an article, spotting exactly what changed between two versions of
+      a config file, checking what a co-worker edited in a document, or reviewing changes to a script or
+      config that isn't in version control.
+    </p>
+  </div>
+
+  <div class="more-tools">
+    <h2>More free tools</h2>
+    <ul>
+      <li><a href="dev-toolbox.html">Dev Toolbox</a> — this diff checker plus JSON formatter, Base64, regex tester, and more, all on one page.</li>
+      <li><a href="regex-tester.html">Regex Tester</a> — test patterns with live match highlighting.</li>
+      <li><a href="word-counter.html">Word Counter</a> — live word, character, and sentence counts.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="ad-slot"><!-- AD BANNER SLOT: bottom leaderboard (728x90) -- replace with AdSense ins tag --></div>
+
+<footer>
+  <p>Runs entirely in your browser — nothing you type is uploaded anywhere.</p>
+  <nav><a href="index.html">Home</a> · <a href="about.html">About</a> · <a href="privacy.html">Privacy Policy</a> · <a href="contact.html">Contact</a></nav>
+</footer>
+
+<script src="dev-toolbox.js"></script>
+</body>
+</html>

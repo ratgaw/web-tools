@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Lorem Ipsum Generator Online</title>
+<meta name="description" content="Generate placeholder Lorem Ipsum text online for free — choose paragraph count and length for mockups, layout testing, and design work.">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2150962689885624"
+     crossorigin="anonymous"></script>
+<script src="theme.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="dev-toolbox.css">
+</head>
+<body>
+
+<aside class="ad-rail ad-rail-left"><!-- AD BANNER SLOT: left skyscraper (160x600) -- replace with AdSense ins tag --></aside>
+<aside class="ad-rail ad-rail-right"><!-- AD BANNER SLOT: right skyscraper (160x600) -- replace with AdSense ins tag --></aside>
+
+<div class="ad-slot"><!-- AD BANNER SLOT: top leaderboard (728x90) -- replace with AdSense ins tag --></div>
+
+<header>
+  <div>
+    <h1>Free Lorem Ipsum Generator</h1>
+    <p>Generate placeholder text with as many paragraphs and words as you need.</p>
+  </div>
+  <div class="header-actions">
+    <a class="home-btn" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>Home</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+  </div>
+</header>
+
+<div class="wrap">
+  <p class="intro-text">
+    Set how many paragraphs and roughly how many words per paragraph you want, and generate placeholder
+    text instantly — useful for filling in a mockup, testing how a layout handles varying text lengths, or
+    populating a CMS template before real content exists.
+  </p>
+
+  <div class="panel active" data-panel="lorem">
+    <h2>Lorem Ipsum Generator</h2>
+    <div class="row">
+      <div><label>Paragraphs<input type="number" id="loremParas" value="3" min="1" max="50"></label></div>
+      <div><label>Words per paragraph<input type="number" id="loremWords" value="40" min="5" max="200"></label></div>
+      <div><label>Start with "Lorem ipsum..."
+        <select id="loremClassic"><option value="yes">Yes</option><option value="no">No</option></select>
+      </label></div>
+    </div>
+    <div class="btn-row">
+      <button class="btn" onclick="loremGen()">Generate</button>
+      <button class="btn secondary" onclick="copyText('loremOut')">Copy Output</button>
+    </div>
+    <textarea id="loremOut" class="out" style="min-height:220px" readonly></textarea>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="about-block">
+    <h2>Why designers still use Lorem Ipsum</h2>
+    <p>
+      Lorem Ipsum is scrambled Latin, deliberately meaningless so it doesn't distract from evaluating
+      layout, typography, and spacing — real sentences pull a reviewer's attention to the words instead of
+      the design. It's been the standard placeholder text in publishing and design since the 1960s, and
+      remains useful today for mockups, wireframes, CMS templates, and print layouts before final copy is
+      ready.
+    </p>
+    <p>
+      Generate as many paragraphs as you need at whatever rough length approximates your real content, so
+      you can see how the design holds up with realistic amounts of text rather than one placeholder
+      sentence.
+    </p>
+  </div>
+
+  <div class="more-tools">
+    <h2>More free tools</h2>
+    <ul>
+      <li><a href="dev-toolbox.html">Dev Toolbox</a> — this generator plus JSON formatter, Base64, word counter, regex tester, and more, all on one page.</li>
+      <li><a href="word-counter.html">Word Counter</a> — live word, character, and sentence counts.</li>
+      <li><a href="markdown-preview.html">Markdown Previewer</a> — live-render Markdown as you type.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="ad-slot"><!-- AD BANNER SLOT: bottom leaderboard (728x90) -- replace with AdSense ins tag --></div>
+
+<footer>
+  <p>Runs entirely in your browser — nothing is uploaded anywhere.</p>
+  <nav><a href="index.html">Home</a> · <a href="about.html">About</a> · <a href="privacy.html">Privacy Policy</a> · <a href="contact.html">Contact</a></nav>
+</footer>
+
+<script src="dev-toolbox.js"></script>
+</body>
+</html>

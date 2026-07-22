@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Random Username & Name Generator Online</title>
+<meta name="description" content="Generate random usernames or display names online for free — great for test data, placeholders, or anonymous accounts. Runs entirely in your browser.">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2150962689885624"
+     crossorigin="anonymous"></script>
+<script src="theme.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="generator-hub.css">
+</head>
+<body>
+
+<aside class="ad-rail ad-rail-left"><!-- AD BANNER SLOT: left skyscraper (160x600) -- replace with AdSense ins tag --></aside>
+<aside class="ad-rail ad-rail-right"><!-- AD BANNER SLOT: right skyscraper (160x600) -- replace with AdSense ins tag --></aside>
+
+<div class="ad-slot"><!-- AD BANNER SLOT: top leaderboard (728x90) -- replace with AdSense ins tag --></div>
+
+<header>
+  <div>
+    <h1>Free Random Username & Name Generator</h1>
+    <p>Generate random usernames or display names in bulk — for test data, placeholders, or a fresh handle.</p>
+  </div>
+  <div class="header-actions">
+    <a class="home-btn" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>Home</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+  </div>
+</header>
+
+<div class="wrap">
+  <p class="intro-text">
+    Choose whether you want gamertag-style usernames (adjective + noun + number) or realistic-sounding
+    display names (first + last), how many, and generate a fresh batch instantly.
+  </p>
+
+  <div class="panel active" data-panel="name">
+    <h2>Random Name & Username Generator</h2>
+    <div class="row">
+      <div>
+        <label>Type</label>
+        <select id="nameType"><option value="username">Username</option><option value="display">Display Name</option></select>
+      </div>
+      <div>
+        <label>How many?</label>
+        <input type="number" id="nameCount" value="5" min="1" max="50">
+      </div>
+    </div>
+    <div class="btn-row"><button class="btn" onclick="genNames()">Generate</button></div>
+    <div class="list-out" id="nameOut"></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="about-block">
+    <h2>What this generator is useful for</h2>
+    <p>
+      <strong>Username mode</strong> combines a random adjective, a random noun, and a three-digit number
+      (like <code>CrimsonFalcon482</code>) — the same pattern used by countless gamertag and account-name
+      generators, useful for placeholder accounts, test fixtures, or picking a new handle without staring
+      at a blank field. <strong>Display name mode</strong> pairs random first and last names for more
+      realistic-looking sample data, handy when populating a demo, mockup, or test database that needs to
+      look like real users without using anyone's actual name.
+    </p>
+    <p>
+      Everything is generated locally with no server round-trip, so you can generate as many as you need
+      without rate limits.
+    </p>
+  </div>
+
+  <div class="more-tools">
+    <h2>More free tools</h2>
+    <ul>
+      <li><a href="generator-hub.html">Generator Hub</a> — this name generator plus QR codes, passwords, UUIDs, and color palettes, all on one page.</li>
+      <li><a href="uuid-generator.html">UUID Generator</a> — random v4 UUIDs for code and databases.</li>
+      <li><a href="dev-toolbox.html">Dev Toolbox</a> — JSON formatter, Base64, word counter, and more.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="ad-slot"><!-- AD BANNER SLOT: bottom leaderboard (728x90) -- replace with AdSense ins tag --></div>
+
+<footer>
+  <p>Runs entirely in your browser — nothing you generate is uploaded anywhere.</p>
+  <nav><a href="index.html">Home</a> · <a href="about.html">About</a> · <a href="privacy.html">Privacy Policy</a> · <a href="contact.html">Contact</a></nav>
+</footer>
+
+<script src="generator-hub.js"></script>
+</body>
+</html>
